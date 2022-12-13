@@ -22,3 +22,7 @@ func (q *Queue[T]) Poll() (*T, bool) {
 	q.queue = q.queue[1:]
 	return e, true
 }
+
+func (q *Queue[T]) IsEmpty() bool {
+	return len(q.queue) == 0
+}
